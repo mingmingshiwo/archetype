@@ -3,9 +3,9 @@
     <jmxConfigurator/>
 
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>/opt/tuniu/logs/tomcat/app/${tomcat_app_base}/sus.log</File>
+        <File>/data/logs/tomcat/app/${tomcat_app_base}/sus.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>/opt/tuniu/logs/tomcat/app/${tomcat_app_base}/sus-%d{yyyy-MM-dd}-%i.log
+            <FileNamePattern>/data/logs/tomcat/app/${tomcat_app_base}/sus-%d{yyyy-MM-dd}-%i.log
             </FileNamePattern>
             <maxHistory>30</maxHistory>
             <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
