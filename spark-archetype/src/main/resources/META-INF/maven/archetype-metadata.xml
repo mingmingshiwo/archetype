@@ -13,6 +13,12 @@
                 <include>**/*.**</include>
             </includes>
         </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/scala</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
 
         <fileSet filtered="true" encoding="UTF-8">
             <directory>src/test/java</directory>
@@ -22,6 +28,12 @@
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
             <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/scala</directory>
             <includes>
                 <include>**/*.**</include>
             </includes>
