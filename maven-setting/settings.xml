@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!--localRepository>d:/maven/repository</localRepository-->
+  
+  <servers>
+	  <server>  
+			<id>nexus</id>  
+			<username>visitor</username>  
+			<password>***</password>  
+	  </server> 	  
+  </servers>
+
+
+  <profiles>
+  	<profile>  
+      <id>multiRepos</id>
+      <repositories>
+		    <repository>  
+		      <id>repo1</id>  
+		      <name>repo1</name>
+		      <url>https://repo1.maven.org/maven2</url>
+		      <releases>
+		        <enabled>true</enabled>  
+		      </releases>  
+		      <snapshots>  
+		        <enabled>false</enabled>  
+		      </snapshots>  
+		    </repository>
+		    <repository>  
+		      <id>wtf</id>  
+		      <name>wtf</name>  
+		      <url>http://nexus.wtf.org/nexus/content/groups/public</url>
+		      <releases>  
+		        <enabled>true</enabled>
+		      </releases>  
+		      <snapshots>  
+		        <enabled>true</enabled>  
+		      </snapshots>  
+		    </repository>
+		    <repository>  
+		      <id>nexus</id>  
+		      <name>own nexus</name>  
+		      <url>http://108.61.246.117:8081/repository/maven-releases</url>
+		      <releases>  
+		        <enabled>true</enabled>
+		      </releases>  
+		      <snapshots>  
+		        <enabled>false</enabled>  
+		      </snapshots>  
+		    </repository>
+		    <repository>  
+		      <id>nexus-snapshot</id>  
+		      <name>own nexus snapshot</name>  
+		      <url>http://108.61.246.117:8081/repository/maven-snapshots</url>
+		      <releases>  
+		        <enabled>false</enabled>
+		      </releases>  
+		      <snapshots>  
+		        <enabled>true</enabled>  
+		      </snapshots>  
+		    </repository>		    		    		    
+		  </repositories>      
+    </profile>    
+  </profiles>
+
+   <activeProfiles>
+     <activeProfile>multiRepos</activeProfile>
+   </activeProfiles>
+</settings>
